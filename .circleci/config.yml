@@ -44,7 +44,9 @@ workflows:
   version: 2
   build-master:
     jobs:
-      - build
+      - build:
+          context: options
       - deploy:
+          context: options
           requires:
             - build
