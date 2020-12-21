@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: etrade-token-fetcher
 spec:
-  schedule: "0 * * * *"
+  schedule: "0,30 * * * *"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
@@ -18,11 +18,7 @@ spec:
             envFrom:
             - configMapRef:
                name: etrade-config
-            volumeMounts:
-            - mountPath: /tokens
-              name: token-volume
+            - configMapRef:
+               name: cluster-config
           restartPolicy: OnFailure
-          volumes:
-            - name: token-volume
-              persistentVolumeClaim:
-                claimName: token-pvc        
+ 
