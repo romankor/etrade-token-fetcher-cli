@@ -4,7 +4,7 @@ metadata:
   name: etrade-token-fetcher
 spec:
   schedule: "0 * * * *"
-  successfulJobsHistoryLimit: 2
+  successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
     spec:
