@@ -469,4 +469,4 @@ MigrationBackup/
 
 # End of https://www.gitignore.io/api/node,visualstudiocode,visualstudio
 
-.kube/
+./ops/.kube
