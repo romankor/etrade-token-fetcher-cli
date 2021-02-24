@@ -3,7 +3,7 @@ kind: CronJob
 metadata:
   name: etrade-token-fetcher
 spec:
-  schedule: "0,30 * * * *"
+  schedule: "0,30 13-23 * * 1-5"
   successfulJobsHistoryLimit: 1
   failedJobsHistoryLimit: 1
   jobTemplate:
